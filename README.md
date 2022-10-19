@@ -5,4 +5,4 @@
 Так же в этой работе реализован интерактив с помощью JavaScript
 
 Ссылка на репозиторий:
-https://vladislavfertikov.github.io/mesto /
+https://vladislavfertikov.github.io/mesto/
