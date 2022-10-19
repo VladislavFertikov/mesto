@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mesto</title>
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="header">
+        <img
+          class="header__logo"
+          src="images/header-logo.svg"
+          alt="Логитип
+        Место"
+        />
+        <hr class="header__line" />
+      </div>
+      <main classs="content">
+        <section class="profile">
+          <img class="profile__avatar" src="images/avatar.jpg" alt="Аватар" />
+          <div class="profile__info">
+            <div class="profile__group">
+              <h1 class="profile__title">Жак-Ив Кусто</h1>
+              <button class="profile__edit-button"></button>
+            </div>
+            <p class="profile__subtitle">Исследователь океана</p>
+          </div>
+          <button class="profile__add-button"></button>
+        </section>
+        <section class="elements">
+          <div class="element">
+            <img
+              class="element__image"
+              src="images/kirill-pershin-1088404-unsplash.jpg"
+              alt="Карачаевск"
+            />
+            <div class="element__group">
+              <h2 class="element__title">Карачаевск</h2>
+              <button class="element__like"></button>
+            </div>
+          </div>
+          <div class="element">
+            <img
+              class="element__image"
+              src="images/kirill-pershin-1404681-unsplash.png"
+              alt="Гора Эльбрус"
+            />
+            <div class="element__group">
+              <h2 class="element__title">Гора Эльбрус</h2>
+              <button class="element__like"></button>
+            </div>
+          </div>
+          <div class="element">
+            <img
+              class="element__image"
+              src="images/kirill-pershin-1556355-unsplash.jpg"
+              alt="Домбай"
+            />
+            <div class="element__group">
+              <h2 class="element__title">Домбай</h2>
+              <button class="element__like"></button>
+            </div>
+          </div>
+          <div class="element">
+            <img
+              class="element__image"
+              src="images/kirill-pershin-1404681-unsplash.png"
+              alt="Гора Эльбрус"
+            />
+            <div class="element__group">
+              <h2 class="element__title">Гора Эльбрус</h2>
+              <button class="element__like"></button>
+            </div>
+          </div>
+          <div class="element">
+            <img
+              class="element__image"
+              src="images/kirill-pershin-1556355-unsplash.jpg"
+              alt="Домбай"
+            />
+            <div class="element__group">
+              <h2 class="element__title">Домбай</h2>
+              <button class="element__like"></button>
+            </div>
+          </div>
+          <div class="element">
+            <img
+              class="element__image"
+              src="images/kirill-pershin-1088404-unsplash.jpg"
+              alt="Карачаевск"
+            />
+            <div class="element__group">
+              <h2 class="element__title">Карачаево-Ч...</h2>
+              <button class="element__like"></button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <p class="footer__subtitle">© 2020 Mesto Russia</p>
+      </footer>
+      <section class="popup">
+        <div class="popup__container">
+          <button class="popup__close"></button>
+          <div class="popup__content">
+            <h2 class="popup__title">Редактировать профиль</h2>
+            <input
+              type="text"
+              class="popup__input popup__input_name"
+              value="Жак-Ив Кусто"
+              placeholder="Имя профиля"
+            />
+            <input
+              type="text"
+              class="popup__input popup__input_profession"
+              value="Исследователь океана"
+              placeholder="Описание профиля"
+            />
+            <button type="submit" value="Сохранить" class="popup__save">
+              Сохранить
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
