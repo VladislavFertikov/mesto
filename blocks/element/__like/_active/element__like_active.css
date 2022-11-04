@@ -1,3 +1,13 @@
 .element__like_active {
-  background-image: url(../../../images/active-like.svg);
+  background-image: url(../../../../images/active-like.svg);
+  width: 22px;
+  height: 19px;
+  margin-top: 30px;
+  margin-right: 30px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.element__like_active:hover {
+  opacity: 0.6;
 }

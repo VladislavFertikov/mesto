@@ -1,0 +1,27 @@
+.element__delete {
+  position: absolute;
+  background-image: url(../../../images/delete.svg);
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 19px;
+  border: none;
+  margin-top: 20px;
+  margin-left: 244px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.element__delete:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 720px) {
+  .element__delete {
+    margin-left: 200px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .element__delete {
+    margin-left: 244px;
+  }
+}
