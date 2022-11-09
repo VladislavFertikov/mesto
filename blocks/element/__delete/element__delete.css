@@ -8,6 +8,7 @@
   margin-top: 20px;
   margin-left: 244px;
   background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
 }
 
 .element__delete:hover {

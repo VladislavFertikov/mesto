@@ -11,6 +11,7 @@
   border: none;
   top: -35px;
   right: -35px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 540px) {
