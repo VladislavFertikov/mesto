@@ -1,0 +1,6 @@
+.popup__save_not-active {
+  background-color: white;
+  color: grey;
+  border: 1px solid grey;
+  border-radius: 2px;
+}

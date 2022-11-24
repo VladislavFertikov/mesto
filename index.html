@@ -23,11 +23,19 @@
           <div class="profile__info">
             <div class="profile__group">
               <h1 class="profile__title">Жак-Ив Кусто</h1>
-              <button class="profile__edit-button" type="button"></button>
+              <button
+                class="profile__edit-button"
+                type="button"
+                id="open-popup"
+              ></button>
             </div>
             <p class="profile__subtitle">Исследователь океана</p>
           </div>
-          <button class="profile__add-button" type="button"></button>
+          <button
+            class="profile__add-button"
+            type="button"
+            id="open-popup"
+          ></button>
         </section>
         <section class="elements"></section>
       </main>
@@ -35,33 +43,50 @@
         <p class="footer__subtitle">© 2020 Mesto Russia</p>
       </footer>
       <section class="popup popup_type_edit-profile">
-        <div class="popup__container">
+        <div class="popup__container" id="popup-container">
           <button
             class="popup__close popup__close_type_edit-profile"
             type="button"
+            id="popup-close"
           ></button>
+          <h2 class="popup__title">Редактировать профиль</h2>
           <form class="popup__content" name="profile-edit">
-            <h2 class="popup__title">Редактировать профиль</h2>
-            <input
-              type="text"
-              name="name"
-              class="popup__input popup__input_type_name"
-              value="Жак-Ив Кусто"
-              placeholder="Имя профиля"
-              required
-            />
-            <input
-              type="text"
-              name="profession"
-              class="popup__input popup__input_type_profession"
-              value="Исследователь океана"
-              placeholder="Профессия"
-              required
-            />
+            <section class="popup__section">
+              <input
+                type="text"
+                name="name"
+                class="popup__input popup__input_type_name"
+                value="Жак-Ив Кусто"
+                placeholder="Имя профиля"
+                minlength="2"
+                maxlength="40"
+                required
+              />
+              <span class="popup__input-error" id="error"
+                >Текст должен быть не короче 2 симв. Длина текста сейчас: 1
+                символ.</span
+              >
+            </section>
+            <section class="popup__section">
+              <input
+                type="text"
+                name="profession"
+                class="popup__input popup__input_type_profession"
+                value="Исследователь океана"
+                placeholder="Профессия"
+                minlength="2"
+                maxlength="200"
+                required
+              />
+              <span class="popup__input-error" id="error"
+                >Текст должен быть не короче 2 симв. Длина текста сейчас: 1
+                символ.</span
+              >
+            </section>
             <button
               type="submit"
-              value="Сохранить"
               class="popup__save popup__save_profile"
+              disabled
             >
               Сохранить
             </button>
@@ -69,31 +94,46 @@
         </div>
       </section>
       <section class="popup popup_type_add-element">
-        <div class="popup__container">
+        <div class="popup__container" id="popup-container">
           <button
             class="popup__close popup__close_type_add-element"
             type="button"
+            id="popup-close"
           ></button>
+          <h2 class="popup__title">Новое место</h2>
           <form class="popup__content" name="profile-edit">
-            <h2 class="popup__title">Новое место</h2>
-            <input
-              type="text"
-              name="name"
-              class="popup__input popup__input_type_title"
-              placeholder="Название"
-              required
-            />
-            <input
-              type="text"
-              name="profession"
-              class="popup__input popup__input_type_link"
-              placeholder="Ссылка на картинку"
-              required
-            />
+            <section class="popup__section">
+              <input
+                type="text"
+                name="name"
+                class="popup__input popup__input_type_title"
+                placeholder="Название"
+                minlength="2"
+                maxlength="30"
+                required
+              />
+              <span
+                class="popup__input-error"
+                id="place-name-entry-error"
+              ></span>
+            </section>
+            <section class="popup__section">
+              <input
+                type="url"
+                name="profession"
+                class="popup__input popup__input_type_link"
+                placeholder="Ссылка на картинку"
+                required
+              />
+              <span
+                class="popup__input-error"
+                id="place-link-entry-error"
+              ></span>
+            </section>
             <button
               type="submit"
-              value="Сохранить"
               class="popup__save popup__save_add-element"
+              disabled
             >
               Создать
             </button>
@@ -101,10 +141,11 @@
         </div>
       </section>
       <section class="popup popup_type_open-image">
-        <div class="popup__show-container">
+        <div class="popup__show-container" id="popup-container">
           <button
             class="popup__close popup__close_type_close-image"
             type="button"
+            id="popup-close"
           ></button>
           <img class="popup__image" src="#" alt="" />
           <p class="popup__name"></p>
@@ -121,6 +162,7 @@
         </div>
       </div>
     </template>
+    <script src="scripts/validation.js"></script>
     <script src="scripts/initialCards.js"></script>
     <script src="scripts/index.js"></script>
   </body>
