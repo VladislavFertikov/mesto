@@ -28,7 +28,7 @@ const popupAddCard = document.querySelector(".popup_type_add-element");
 const popupOpenButtonAddCard = document.querySelector(".profile__add-button");
 
 const popupCloseButton = document.querySelectorAll(".popup__close");
-const OpenPopupBtn = document.querySelectorAll("#open-popup");
+const openPopupBtn = document.querySelectorAll("#open-popup");
 
 /*очистка ошибки*/
 
@@ -72,8 +72,6 @@ popupOpenButtonAddCard.addEventListener("click", () => {
 });
 
 /*закрытие Popup*/
-
-const popup = document.querySelector(".popup");
 
 const closePopup = function (popupName) {
   popupName.classList.remove("popup_is-opened");
@@ -186,10 +184,10 @@ const closePopupByClickOnOverlay = function (event) {
   closePopup(popupOpenZoomImage);
 };
 
-popupEditProfile.addEventListener("click", closePopupByClickOnOverlay);
-popupSaveAddCard.addEventListener("click", closePopupByClickOnOverlay);
-popupOpenZoomImage.addEventListener("click", closePopupByClickOnOverlay);
+popupEditProfile.addEventListener("mousedown", closePopupByClickOnOverlay);
+popupSaveAddCard.addEventListener("mousedown", closePopupByClickOnOverlay);
+popupOpenZoomImage.addEventListener("mousedown", closePopupByClickOnOverlay);
 
 /*валидация форм*/
 
-enableValidation();
+enableValidation(selectors);
