@@ -33,7 +33,7 @@ const toggleButtonState = (inputList, buttonElement, selectors) => {
   }
 };
 
-const setEventListeners = (formElement) => {
+const setEventListeners = (formElement, selectors) => {
   formElement.addEventListener("submit", (event) => {
     event.preventDefault();
   });
@@ -59,6 +59,6 @@ const enableValidation = (selectors) => {
   const formList = document.querySelectorAll(selectors.formSelector);
 
   formList.forEach((formElement) => {
-    setEventListeners(formElement);
+    setEventListeners(formElement, selectors);
   });
 };
