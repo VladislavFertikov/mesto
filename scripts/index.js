@@ -33,20 +33,20 @@ const openPopupBtn = document.querySelectorAll("#open-popup");
 /*очистка ошибки*/
 
 const removeInputError = () => {
-  const ActiveErrorElement = document.querySelectorAll(".popup__input-error");
-  ActiveErrorElement.forEach((ActiveErrorElement) => {
-    ActiveErrorElement.classList.remove(".popup__input-error");
-    ActiveErrorElement.textContent = "";
+  const activeErrorElement = document.querySelectorAll(".popup__input-error");
+  activeErrorElement.forEach((activeErrorElement) => {
+    activeErrorElement.classList.remove(".popup__input-error");
+    activeErrorElement.textContent = "";
   });
 };
 
 /*диактивация кнопки при открытии попап*/
 
 const disabledButton = () => {
-  const SaveButton = document.querySelectorAll(".popup__save");
-  SaveButton.forEach((SaveButton) => {
-    SaveButton.setAttribute("disabled", true);
-    SaveButton.classList.add("popup__save_not-active");
+  const saveButton = document.querySelectorAll(".popup__save");
+  saveButton.forEach((saveButton) => {
+    saveButton.setAttribute("disabled", true);
+    saveButton.classList.add("popup__save_not-active");
   });
 };
 
