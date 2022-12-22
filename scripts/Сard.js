@@ -1,13 +1,14 @@
-import { openImagePopup } from "./index.js";
 export class Card {
-  constructor(data) {
+  constructor(data, templateCard, openImagePopup) {
     this._name = data.name;
     this._link = data.link;
+    this._openImagePopup = openImagePopup;
+    this._templateCard = templateCard;
   }
 
   _getTemplate() {
     const cardTemplate = document
-      .querySelector("#element-template")
+      .querySelector(this._templateCard)
       .content.querySelector(".element")
       .cloneNode(true);
 
@@ -44,6 +45,6 @@ export class Card {
     this._likeBtn.addEventListener("click", (event) =>
       this._handleLikeCard(event)
     );
-    this._elementImage.addEventListener("click", openImagePopup);
+    this._elementImage.addEventListener("click", this._openImagePopup);
   };
 }
