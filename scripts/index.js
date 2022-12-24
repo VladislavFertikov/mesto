@@ -1,6 +1,6 @@
 import { initialCards } from "./initialCards.js";
 import { Card } from "./Сard.js";
-import { FormValidator } from "./validation.js";
+import { FormValidator } from "./FormValidator.js";
 import { validationConfig } from "./constants.js";
 
 const popupOpenZoomImage = document.querySelector(".popup_type_open-image");
@@ -86,15 +86,15 @@ popupContent.addEventListener("submit", saveEnterValues);
 
 /*добалвение карточек JS*/
 
-const crateCards = function () {
-  const elem = { name: titleInput.value, link: linkInput.value };
+const crateCards = function (elem) {
   const carding = new Card(elem, ".element-template", openImagePopup);
   container.prepend(carding.generateCard(carding));
 };
 
 const addNewCard = function (evt) {
   evt.preventDefault();
-  crateCards();
+  const elem = { name: titleInput.value, link: linkInput.value };
+  crateCards(elem);
   evt.target.reset();
   closePopup(popupAddCard);
 };
@@ -102,9 +102,7 @@ popupAddCard.addEventListener("submit", addNewCard);
 
 const renderCards = function () {
   initialCards.forEach((elem) => {
-    const card = new Card(elem, ".element-template", openImagePopup);
-    const cardElement = card.generateCard();
-    document.querySelector(".elements").prepend(cardElement);
+    crateCards(elem);
   });
 };
 renderCards();
