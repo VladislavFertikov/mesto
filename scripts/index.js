@@ -86,26 +86,51 @@ popupContent.addEventListener("submit", saveEnterValues);
 
 /*добалвение карточек JS*/
 
-const crateCards = function (elem) {
+const createCard = function (elem) {
   const carding = new Card(elem, ".element-template", openImagePopup);
-  container.prepend(carding.generateCard(carding));
+  return carding.generateCard(carding);
 };
 
 const addNewCard = function (evt) {
   evt.preventDefault();
   const elem = { name: titleInput.value, link: linkInput.value };
-  crateCards(elem);
+  renderCards(createCard(elem));
   evt.target.reset();
   closePopup(popupAddCard);
 };
 popupAddCard.addEventListener("submit", addNewCard);
 
-const renderCards = function () {
+const renderCards = (card) => {
+  container.prepend(card);
+};
+
+const addCardToPage = function () {
   initialCards.forEach((elem) => {
-    crateCards(elem);
+    renderCards(createCard(elem));
   });
 };
-renderCards();
+addCardToPage();
+
+// const createCard = function (elem) {
+//   const carding = new Card(elem, ".element-template", openImagePopup);
+//   container.prepend(carding.generateCard(carding));
+// };
+
+// const addNewCard = function (evt) {
+//   evt.preventDefault();
+//   const elem = { name: titleInput.value, link: linkInput.value };
+//   createCard(elem);
+//   evt.target.reset();
+//   closePopup(popupAddCard);
+// };
+// popupAddCard.addEventListener("submit", addNewCard);
+
+// const renderCards = function () {
+//   initialCards.forEach((elem) => {
+//     createCard(elem);
+//   });
+// };
+// renderCards();
 
 /*закрытие попап по esc*/
 
